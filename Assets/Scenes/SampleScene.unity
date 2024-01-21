@@ -760,6 +760,7 @@ MonoBehaviour:
   - {fileID: 412704703}
   audioSourcesToToggle:
   - {fileID: 973141676}
+  - {fileID: 1380188103}
   materialChanger: {fileID: 1298404773}
 --- !u!1 &71842569
 GameObject:
