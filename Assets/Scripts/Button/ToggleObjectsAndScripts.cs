@@ -8,6 +8,7 @@ public class ToggleObjectsScriptsAndAudio : MonoBehaviour
     public GameObject[] objectsToToggle; // Array of GameObjects to toggle
     public MonoBehaviour[] scriptsToToggle; // Array of scripts (MonoBehaviour) to toggle
     public AudioSource[] audioSourcesToToggle; // Array of AudioSource components to toggle
+    public MaterialChanger materialChanger;
 
     void OnEnable()
     {
@@ -37,6 +38,11 @@ public class ToggleObjectsScriptsAndAudio : MonoBehaviour
         foreach (var audioSource in audioSourcesToToggle)
         {
             audioSource.enabled = !audioSource.enabled;
+        }
+        
+        if (materialChanger != null)
+        {
+            materialChanger.ChangeToNextMaterial();
         }
     }
 }
